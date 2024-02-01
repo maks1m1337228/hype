@@ -8,8 +8,10 @@
 </head>
 <body>
         <header>
-            <div class="blog_avatar">B</div>
-            <div class="blog_title">Мой блог</div>
+            <div class="blog">
+            <span class="blog_avatar">B</span>
+            <span class="blog_title">Мой блог</span>
+            </div>
 
             <nav class = "nav-menu">
                 <ul>
@@ -19,8 +21,8 @@
                 </ul>
 
                 <form action="/search" method="get">
-                    <input type="text" name="q" placeholder="Поиск...">
-                    <input type="submit" name="123" placeholder="отправить">
+                    <input type="text" name="search_line" placeholder="Поиск">
+                    <input type="submit" hidden>
                   </form>
                 
             </nav>
@@ -28,21 +30,20 @@
         <main>
 
         <section id="frame">
-            <p class="text_one">FRONTEND</p>
-            <div class="frame_rectangle">&middot;</div>
+            <span class="text_one">FRONTEND &middot;</span>
             <span class="text_two">12 мая 2024</span>
         </section>
 
-         <div class="color_theory"><p class="color_theory__content">Теория цвета - Как цвет влияет на поведение потребителей</p></div>
+         <h>Теория цвета - Как цвет влияет на поведение потребителей</h>
 
          <div class="developer_frame">
             <img src="img/natusik.jpg" alt="dev_photo" class="developer_photo">
             <div class="developer_text">
-            <span class="developer_name">Наталья Васильева</span>
-            <span class="developer_post">Разработчик</span>
+                Наталья Васильева
+                <span class="developer_post">Разработчик</span>
             </div>
          </div>
-
+        <section id ="text_and_pic">
             <img src="img/framesphoto.jpg" alt="photo" class="photo">
 
          <div class="texts">
@@ -52,12 +53,11 @@
 
             <p class="third_class">В исследовании «Влияние цвета на маркетинг» (Impact of color on marketing) говорится, что использование разных цветов может существенно влиять на настроение и поведение потребителей. Утверждается, что от 60 до 90% покупателей (в зависимости от категории продукта) дают положительную или отрицательную оценку товару, основываясь только на его цвете.</p>
          </div>
+        </section>
         </main>
 
          <footer>
-            <div class="footer_content">
                 <span>Все права защищены (c) 2024</span>
-            </div>
          </footer>
 </body>
 </html>
