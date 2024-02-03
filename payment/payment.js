@@ -1,13 +1,6 @@
 const perHour = 80
-const goTime = 11
-let orderTime = 40
-let manage = orderTime / 5 + 2
-let price = manage * perHour
-let isTrue = true
-let isFalse = false
-if (manage >= goTime) {
-	console.log(isFalse)
-} else {
-	console.log(isTrue)
-}
-console.log(price)
+const freeTime = 11
+const orderTime = 40
+const availableHours = (freeTime - 2) * 5
+console.log(availableHours > orderTime ? 'Успею' : 'Не успею')
+console.log("Стоимость проекта: " + orderTime * perHour + "$")
