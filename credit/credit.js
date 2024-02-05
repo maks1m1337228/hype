@@ -1,17 +1,22 @@
-const ageAnswer = prompt('Сколько вам лет?', '')
-const job = prompt('Вы работаете?', '')
-const moneyAnswer = prompt('Сколько у вас денег', '')
-const price = 2000
-const age = Number(ageAnswer)
-const money = Number(moneyAnswer)
+const age = 24
+const hasJob = true 
+const price = 3000
+let curBalance = 1500
 
-function userCheck(age, job, money) {
-	if (age > 24 && job == 'Да') {
-		money += 500
-	} else if (age > 24) {
-		money += 100
-	}
-	return money >= price
+function creditCalc(age, hasJob) {
+	switch (true) {
+		case hasJob && age >= 24:
+			curBalance += 500
+		case !hasJob && age >= 24: 
+		  curBalance += 100
+		default: 
+		return false
+	}  
+}	
+
+function userCheck(age, price, hasJob, ) {
+ const creditSum =	creditCalc(age, hasJob)
+	return curBalance >= price
 }
 
-console.log(userCheck(age, job, money))
+console.log(userCheck(age, price , hasJob))
