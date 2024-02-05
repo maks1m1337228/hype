@@ -1,0 +1,1 @@
+const toPower = (num , power) => num ** power
