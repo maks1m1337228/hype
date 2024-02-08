@@ -1,13 +1,13 @@
+const url = "https://studentki.ru/teens/hui";
 
-const url = "https://studentki.ru/teens"
-
-function toArray(url) {
-	const arr = url.split('/');
-	for (let i = 0; i < arr.length; i++) {
-		console.log(arr[i])
-	}
+function devidedStudentki (url) {
+	const [protocol, _, host, ...path] = url.split('/')
+	console.log(protocol.replace(":", ""));
+	console.log(host)
+	console.log('/' + path.join('/'));
 }
-toArray(url)
+devidedStudentki(url)
+
 
 
 		
