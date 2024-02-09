@@ -1,17 +1,19 @@
 const operations = [1000, -700, 300, -500, 10000]
 const startBalance = 100
 
-function calculation() {
-	let finalBalance = startBalance
-  for (let i = 0; i < operations.length; i++ ) {
-      finalBalance += operations[i]
-      if (finalBalance < 0) {
-        return false
-      }
+function totalBalance() {
+  let finalBalance = 0;
+  for (let operation of operations) {
+    finalBalance += operation.amount;
+    if (finalBalance < 0) {
+      console.log('Баланс стал отрицательным!');
+      return false;
+    }
   }
-	console.log('Итоговый баланс: ' + finalBalance + '$');
+  console.log('Итоговый баланс: ' + finalBalance + '$');
+}
 
-	let avgProfit = 0
+/**let avgProfit = 0
   let quantity1 = 0
 	for (let i = 0; i < operations.length; i++) {
 		if (operations[i] > 0 ) {
@@ -32,7 +34,7 @@ function calculation() {
 	console.log('Средний расод: ' + avgExpense/quantity2 + '$');
 	
   return true    
-}
 
-const result = calculation()
-console.log(result);
+*/
+const result = totalBalance(startBalance)
+console.log(result)
