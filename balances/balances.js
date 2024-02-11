@@ -1,40 +1,36 @@
-const operations = [1000, -700, 300, -500, 10000]
-const startBalance = 100
+const operations = [1000, -7000, 300, -500, 10000];
 
-function totalBalance() {
-  let finalBalance = 0;
-  for (let operation of operations) {
-    finalBalance += operation.amount;
-    if (finalBalance < 0) {
-      console.log('Баланс стал отрицательным!');
-      return false;
+function totalBalance(startBalance) {
+    let finalBalance = startBalance;
+    for (let operation of operations) {
+        finalBalance += operation;
+        if (finalBalance < 0) {
+            return false;
+        }
     }
-  }
-  console.log('Итоговый баланс: ' + finalBalance + '$');
+    console.log(`Итоговый баланс: ${finalBalance}$`);
+    return true;
 }
 
-/**let avgProfit = 0
-  let quantity1 = 0
-	for (let i = 0; i < operations.length; i++) {
-		if (operations[i] > 0 ) {
-			avgProfit += operations[i]
-			quantity1++
-		}
-	}
-	console.log('Средний доход: ' + avgProfit/quantity1 + '$');
+function avgCome() {
+    let quantity = 0;
+    let avgProfit = 0;
+    let avgExpense = 0;
+    for (let i = 0; i < operations.length; i++) {
+        if (operations[i] > 0) {
+            avgProfit += operations[i];
+            quantity++;
+        }
+        if (operations[i] < 0) {
+            avgExpense -= operations[i];
+            quantity++;
+        }
+    }
+    console.log(`средний доход: ${avgProfit / quantity}$`);
+    console.log(`средние расходы: ${avgExpense / quantity}$`);
+}
 
-	let avgExpense = 0
-  let quantity2 = 0
-	for (let i = 0; i < operations.length; i++) {
-		if (operations[i] < 0 ) {
-			avgExpense -= operations[i]
-			quantity2++
-		}
-	}
-	console.log('Средний расод: ' + avgExpense/quantity2 + '$');
-	
-  return true    
+const result = totalBalance(100);
+console.log(result);
+avgCome();
 
-*/
-const result = totalBalance(startBalance)
-console.log(result)
