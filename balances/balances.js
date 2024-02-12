@@ -14,7 +14,7 @@ function avgCome() {
     let quantity = 0;
     let avgProfit = 0;
     let avgExpense = 0;
-    let quantity1 = 0
+    let negativeQuantity = 0
     for (let operation of operations) {
         if (operation > 0) {
             avgProfit += operation;
@@ -22,10 +22,10 @@ function avgCome() {
         }
         if (operation < 0) {
             avgExpense -= operation;
-            quantity1++;
+            negativeQuantity++;
         }
     }
-    return [avgProfit/quantity, avgExpense/quantity1]
+    return [avgProfit/quantity, avgExpense/negativeQuantity]
 }
 
 const result = totalBalance(100);
