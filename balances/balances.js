@@ -1,36 +1,34 @@
-const operations = [1000, -7000, 300, -500, 10000];
+const operations = [1000, -700, 300, -500, 10000];
 
 function totalBalance(startBalance) {
     let finalBalance = startBalance;
     for (let operation of operations) {
         finalBalance += operation;
-        if (finalBalance < 0) {
-            return false;
-        }
     }
     console.log(`Итоговый баланс: ${finalBalance}$`);
-    return true;
+    return finalBalance > 0
+    
 }
 
 function avgCome() {
     let quantity = 0;
     let avgProfit = 0;
     let avgExpense = 0;
-    for (let i = 0; i < operations.length; i++) {
-        if (operations[i] > 0) {
-            avgProfit += operations[i];
+    let quantity1 = 0
+    for (let operation of operations) {
+        if (operation > 0) {
+            avgProfit += operation;
             quantity++;
         }
-        if (operations[i] < 0) {
-            avgExpense -= operations[i];
-            quantity++;
+        if (operation < 0) {
+            avgExpense -= operation;
+            quantity1++;
         }
     }
-    console.log(`средний доход: ${avgProfit / quantity}$`);
-    console.log(`средние расходы: ${avgExpense / quantity}$`);
+    return [avgProfit/quantity, avgExpense/quantity1]
 }
 
 const result = totalBalance(100);
 console.log(result);
-avgCome();
-
+const zxc = avgCome();
+console.log(zxc);
