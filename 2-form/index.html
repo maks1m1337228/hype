@@ -2,49 +2,39 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Register</title>
-	<link rel="stylesheet" href="styles/style.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Register</title>
+ <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-	<section id="container">
-		<div class="registration">
-			<span class="reg_text">Регистрация</span>
-			Уже есть аккаунт?
-			<a href="#">Войти</a>
-		</div>
+ <form class="registration" method="get">
+  <header>
+   <span class="reg_text">Регистрация</span>
+   Уже есть аккаунт?
+   <a href="#">Войти</a>
+  </header> 
+  
 
-		<form method="get">
-			<input type="text" name="company_name" placeholder="Моя компания">
-		</form>
+   <input type="text" name="company_name" placeholder="Моя компания">
 
-		<div class="name_surname">
-			<form class="name" method="get">
-				<input type="text" name="name" placeholder="Имя">
-			</form>
-			<form class="surname" method="get">
-				<input type="text" name="surname" placeholder="Фамилия">
-			</form>
-		</div>
+  <div class="name_surname"> 
+    <input type="text" name="name" placeholder="Имя">
+    <input type="text" name="surname" placeholder="Фамилия">
+  </div>
 
-		<form method="get">
-			<input type="text" name="email" placeholder="E-mail">
-		</form>
+   <input type="text" name="email" placeholder="E-mail">
 
-		<div class="reg_but">
-			<button class="sign_up" type="button">Зарегистрироваться</button>
-		</div>
+  <div class="reg_but">
+   <button class="sign_up" type="button">Зарегистрироваться</button>
+  </div>
 
-		<div class="terms_of_use">
-			<button class="submit" type="button"></button>
-			Я прочитал и принимаю
-			<a href="#">Условия использования</a>
-		</div>
-
-	</section>
-	
+  <div class="terms_of_use">
+   <button class="submit" type="button"></button>
+   Я прочитал и принимаю
+   <a href="#">Условия использования</a>
+  </div>
+</form>
 </body>
-
 </html>
