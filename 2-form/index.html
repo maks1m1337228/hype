@@ -2,38 +2,43 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Register</title>
- <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
- <form class="registration" method="get">
-  <header>
-   <span class="reg_text">Регистрация</span>
-   Уже есть аккаунт?
-   <a href="#">Войти</a>
-  </header> 
-  
+  <form class="registration" method="get">
+    <header>
 
-   <input type="text" name="company_name" placeholder="Моя компания">
+      <h1>Регистрация</h1>
+      <div class="header_row">
+        <h4>Уже есть аккаунт?</h4>
+        <a href="#">Войти</a>
+      </div>
 
-    <input type="text" name="name" placeholder="Имя">
-    <input type="text" name="surname" placeholder="Фамилия">
+    </header>
 
-   <input type="text" name="email" placeholder="E-mail">
+    <input type="text" name="company_name" placeholder="Моя компания">
+    <div class="row">
+      <input class="input-group" type="text" name="name" placeholder="Имя">
+      <input class="input-group" type="text" name="surname" placeholder="Фамилия">
+    </div>
 
-   <button class="sign_up" type="button">Зарегистрироваться</button>
+    <input class="input-group" type="text" name="email" placeholder="E-mail">
 
-  
-  <label>
-    <input type="checkbox" name = "terms">
-    Я принимаю Условия
-    <a href="#">Условия использования</a>
+    <button class="sign_up" type="button">Зарегистрироваться</button>
+
+
+    <label for="terms">
+      <input type="checkbox" name="terms">
+      Я принимаю Условия
+      <a href="#">Условия использования</a>
     </label>
-  
-   
-</form>
+
+
+  </form>
 </body>
+
 </html>
