@@ -9,36 +9,33 @@
 </head>
 
 <body>
+  <section class="container">
   <form class="registration" method="get">
     <header>
-
       <h1>Регистрация</h1>
-      <div class="header_row">
-        <h4>Уже есть аккаунт?</h4>
-        <a href="#">Войти</a>
-      </div>
-
+      <h2>Уже есть аккаунт?</h2>
+      <a href="#">Войти</a>
     </header>
 
-    <input type="text" name="company_name" placeholder="Моя компания">
-    <div class="row">
-      <input class="input-group" type="text" name="name" placeholder="Имя">
-      <input class="input-group" type="text" name="surname" placeholder="Фамилия">
-    </div>
+    <input type="text" name="company_name" placeholder="Моя компания" required>
+      <input class="input-group" type="text" name="name" placeholder="Имя" required>
+      <input class="input-group" type="text" name="surname" placeholder="Фамилия" required>
 
-    <input class="input-group" type="text" name="email" placeholder="E-mail">
+
+    <input class="input-group" type="email" name="email" placeholder="E-mail" required>
 
     <button class="sign_up" type="button">Зарегистрироваться</button>
 
 
     <label for="terms">
-      <input type="checkbox" name="terms">
+      <input type="checkbox" name="terms" required>
       Я принимаю Условия
       <a href="#">Условия использования</a>
     </label>
 
 
   </form>
+</section>
 </body>
 
 </html>
