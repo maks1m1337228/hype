@@ -87,6 +87,7 @@ input[name='surname'] {
 	border-color: transparent;
 	font-size: 18px;
 	padding: 10px;
+	cursor: pointer;
 
 	img {
 		position: absolute;
