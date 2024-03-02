@@ -1,0 +1,115 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Open Sans', sans-serif;
+	height: 100vh;
+	background: linear-gradient(
+			243deg,
+			#fdc5c5 25.45%,
+			rgba(242, 152, 222, 0) 100%
+		),
+		linear-gradient(243deg, #ffa5a5 32.96%, rgba(255, 255, 255, 0) 82.03%),
+		#f39494;
+}
+.container {
+	display: flex;
+	width: 582px;
+	background: #fffefe;
+	border-radius: 10px;
+	box-shadow: 0px 4px 4px 0px #00000040;
+	align-items: center;
+}
+
+.registration {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 72px 95px 91px 93px;
+	align-items: center;
+	align-content: center;
+	gap: 22px 0;
+}
+
+header {
+	text-align: center;
+	margin-bottom: 25px;
+
+	h1 {
+		font-size: 36px;
+		color: #333;
+	}
+
+	h2 {
+		color: #666;
+		font-size: 18px;
+	}
+}
+
+input {
+	width: 100%;
+	border-radius: 5px;
+	border-color: transparent;
+	background-color: #f5f5f5;
+	font-style: italic;
+	padding: 10px;
+	color: #999;
+	gap: 0;
+}
+input:focus {
+	color: #333;
+	font-style: normal;
+	outline-color: #f5f5f5;
+	background-color: #fff;
+}
+
+input[name='name'] {
+	width: 50%;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-right-color: #fffefe;
+}
+
+input[name='surname'] {
+	width: 50%;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.sign_up {
+	position: relative;
+	width: 100%;
+	color: #ffffff;
+	background-color: #089fe0;
+	border-radius: 5px;
+	border-color: transparent;
+	font-size: 18px;
+	padding: 10px;
+	cursor: pointer;
+
+	img {
+		position: absolute;
+		right: 22px;
+	}
+}
+
+label[for='terms'] {
+	text-align: center;
+	font-size: 14px;
+	a {
+		text-decoration: none;
+	}
+	input {
+		width: fit-content;
+		background: #f5f5f5;
+	}
+}
+
+a {
+	color: #089fe0;
+}
