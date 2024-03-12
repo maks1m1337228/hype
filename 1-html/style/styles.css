@@ -29,11 +29,13 @@ header {
 		right: 180px;
 	}
 }
-/*input:placeholder {
+input[name='search_line'] {
 	border-radius: 100px;
 	background: rgba(31, 41, 55, 0.6);
 	padding-top: 9px;
-}*/
+	padding-bottom: 12px;
+	border: transparent;
+}
 .blog {
 	font-size: 18px;
 }
@@ -81,17 +83,48 @@ header {
 		font-size: 24px;
 		margin-bottom: 30px;
 	}
-	.developer_frame {
-		display: flex;
+}
 
-		font-size: 16px;
-		margin-bottom: 28px;
-		img {
-			border-radius: 100%;
-		}
-		.developer_post {
-			font-size: 14px;
-			opacity: 0.6;
-		}
+.developer_frame {
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	margin-bottom: 28px;
+	img {
+		border-radius: 100%;
+		margin-right: 16px;
 	}
+	.developer_post {
+		font-size: 14px;
+		opacity: 0.6;
+	}
+}
+.developer_text {
+	display: flex;
+	flex-direction: column;
+	align-self: stretch;
+	justify-content: space-around;
+}
+
+.texts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 500px;
+}
+
+.photo {
+	border-radius: 10px;
+}
+footer {
+	text-align: center;
+	font-size: 16px;
+	opacity: 0.6;
+}
+.p_type_one {
+	font-size: 20px;
+}
+.p_type_two {
+	font-size: 16px;
 }
